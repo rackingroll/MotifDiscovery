@@ -11,6 +11,8 @@ namespace MotifDiscovery
     {
         static void Main(string[] args)
         {
+            #region DataReading
+            // Read the Local data source File, format csv
             StreamReader reader = new StreamReader(@"D:\v-chenluo\Data.csv");
             String value = reader.ReadLine();
             value = reader.ReadLine() + ",";
@@ -28,10 +30,11 @@ namespace MotifDiscovery
 
                 value = reader.ReadLine();
             }
+            #endregion
 
-            // test code
-            SamplingDiscover samp = new SamplingDiscover();
-            samp.Sampling(SeriesOne, 100, 10, 5, 0.05, 10);
+            // Testing Code, the motif is the result motif
+            SamplingDiscover MotifDiscover = new SamplingDiscover();
+            List<double> motif = MotifDiscover.Sampling(SeriesOne, 100, 10, 5, 0.05, 10);
 
             Console.ReadLine();
         }

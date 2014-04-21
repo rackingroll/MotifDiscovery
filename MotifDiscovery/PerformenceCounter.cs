@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MotifDiscovery
 {
     /// <summary>
-    /// This class is used for preprocessing scv data
+    /// This class is used for Pre-processing scv data
     /// </summary>
     class PerformenceCounter
     {
